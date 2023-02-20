@@ -3,43 +3,45 @@
 # --------------------------------------
 
 menu:
-  首页: / || fas fa-home
-  ♥ Love: /love/
-  文章||fas fa-list:
-    # Music: /music/ || fas fa-music
-    # Movie: /movies/ || fas fa-video
-    时间轴: /archives/ || fas fa-archive
-    标签: /tags/ || fas fa-tags
-    分类: /categories/ || fas fa-folder-open
-  留言板: /messageboard/ || fas fa-message
-  友链: /link/ || fas fa-link
-  关于: /about/ || fas fa-heart
+  # Home: / || fas fa-home
+  # Archives: /archives/ || fas fa-archive
+  # Tags: /tags/ || fas fa-tags
+  # Categories: /categories/ || fas fa-folder-open
+  # List||fas fa-list:
+  #   Music: /music/ || fas fa-music
+  #   Movie: /movies/ || fas fa-video
+  # Link: /link/ || fas fa-link
+  # About: /about/ || fas fa-heart
+
+nav:
+  logo: # image
+  display_title: true
+  fixed: false # fixed navigation bar
 
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: mac light #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: light #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: 280 # unit: px
-code_word_wrap: true # 代码换行
+highlight_height_limit: false # unit: px
+code_word_wrap: false
 
 # copy settings
 # copyright: Add the copyright information after copied content (複製的內容後面加上版權信息)
 copy:
-  enable: false
+  enable: true
   copyright:
-    enable: true
+    enable: false
     limit_count: 50
 
 # social settings (社交圖標設置)
 # formal:
 #   icon: link || the description
 social:
-  fab fa-github: https://github.com/pan52yu || Github
-  fas fa-envelope: mailto:yhu8836@gmail.com || Email
-#  fab fa-weixin: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/ba287393c7509c886f8709e34a79232.jpg?x-oss-process=style/huyu || 微信 18762675081
+  # fab fa-github: https://github.com/xxxxx || Github
+  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -53,7 +55,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: true
+  enable: false
   preload: false
   CDN:
 
@@ -79,23 +81,21 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-# favicon: /img/favicon.png
-favicon: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/钢铁侠.png?x-oss-process=style/huyu
+favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/20221028215946.png?x-oss-process=style/huyu
+  img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
-# The banner image of home page 主页banner图
-index_img: transparent
-# index_img: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-6dqjdl_1920x1080.png?x-oss-process=style/huyu
+# The banner image of home page
+index_img:
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-p93qd3_1920x1080.png?x-oss-process=style/huyu
+default_top_img:
 
 # The banner image of archive page
 archive_img:
@@ -128,20 +128,16 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
-    - https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/719179.png?x-oss-process=style/huyu
-    - https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/20221028201046.png?x-oss-process=style/huyu
-
+    # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
   flink: /img/friend_404.gif
-  # post_page: /img/404.jpg
-  # post_page: /img/404new.png
-  post_page: /img/404loading.gif
+  post_page: /img/404.jpg
 
 # A simple 404 page
 error_404:
-  enable: true
+  enable: false
   subtitle: 'Page Not Found'
   background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
 
@@ -162,7 +158,7 @@ post_meta:
 # wordcount (字數統計)
 # see https://butterfly.js.org/posts/ceeb73f/#字數統計
 wordcount:
-  enable: true
+  enable: false
   post_wordcount: true
   min2read: true
   total_wordcount: true
@@ -173,8 +169,8 @@ wordcount:
 # 3: auto_excerpt (default)
 # false: do not show the article introduction
 index_post_content:
-  method: 2
-  length: 100 # if you set method to 2 or 3, the length need to config
+  method: 3
+  length: 500 # if you set method to 2 or 3, the length need to config
 
 # anchor
 anchor:
@@ -194,6 +190,7 @@ toc:
   number: true
   expand: false
   style_simple: false # for post
+  scroll_percent: true
 
 post_copyright:
   enable: true
@@ -273,9 +270,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-#  use: Valine # Valine,Disqus
-  use: twikoo,Valine # Valine,Disqus
-#  use: utterances,Valine # Valine,Disqus
+  use: # Valine,Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -315,8 +310,8 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  appId: scsk3LPMieELiM0wSlN9rBRw-gzGzoHsz # leancloud application app id
-  appKey: NjqulhOKSOEEWehIDtyWFhdv # leancloud application app key
+  appId: # leancloud application app id
+  appKey: # leancloud application app key
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: # valine background
@@ -334,7 +329,7 @@ waline:
 # utterances
 # https://utteranc.es/
 utterances:
-  repo: pan52yu/hugoblogtalks
+  repo:
   # Issue Mapping: pathname/url/title/og:title
   issue_term: pathname
   # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
@@ -353,7 +348,7 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://my-twikoo-tawny.vercel.app/
+  envId:
   region:
   visitor: false
   option:
@@ -407,7 +402,7 @@ tidio:
   public_key:
 
 # daovoice
-# http://daovoice.io/
+# http://dashboard.daovoice.io/app
 daovoice:
   enable: false
   app_id:
@@ -437,8 +432,7 @@ footer:
   owner:
     enable: true
     since: 2020
-  custom_text: I wish you to become your own sun, no need to rely on who's light.<p><a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a>&nbsp;<a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a>&nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，默认线路托管于Vercel"></a>&nbsp;<a target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p>
-
+  custom_text:
   copyright: true # Copyright of theme and framework
 
 # Analysis
@@ -451,10 +445,6 @@ baidu_analytics:
 # Google Analytics
 # https://analytics.google.com/analytics/web/
 google_analytics:
-
-# CNZZ Analytics
-# https://www.umeng.com/
-cnzz_analytics:
 
 # Cloudflare Analytics
 # https://www.cloudflare.com/zh-tw/web-analytics/
@@ -530,11 +520,10 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background: url(https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-6dqjdl_1920x1080.png?x-oss-process=style/huyu)
+background:
 
 # Footer Background
-# footer_bg: false
-footer_bg: transparent
+footer_bg: false
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
@@ -633,40 +622,31 @@ hr_icon:
 
 # the subtitle on homepage (主頁subtitle)
 subtitle:
-  enable: true
+  enable: false
   # Typewriter Effect (打字效果)
   effect: true
-  # Effect Speed Options (打字效果速度參數)
-  startDelay: 300 # time before typing starts in milliseconds
-  typeSpeed: 150 # type speed in milliseconds
-  backSpeed: 50 # backspacing speed in milliseconds
-  # loop (循環打字)
-  loop: true
+  # Customize typed.js (配置typed.js)
+  # https://github.com/mattboldt/typed.js/#customization
+  typed_option:
   # source 調用第三方服務
   # source: false 關閉調用
-  # source: 1  # 調用一言網的一句話（簡體） https://hitokoto.cn/
-  source: 2  #調用一句網（簡體） http://yijuzhan.com/
+  # source: 1  調用一言網的一句話（簡體） https://hitokoto.cn/
+  # source: 2  調用一句網（簡體） https://yijuzhan.com/
   # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
-  # source: false
+  source: false
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
-    - Never put off till tomorrow what you can do today
-# Loading Animation (加載動畫)
-# preloader:
-#   enable: false
-#   # source
-#   # 1. fullpage-loading
-#   # 2. pace (progress bar)
-#   source: 1
-#   # pace theme (see https://codebyzach.github.io/pace/)
-#   pace_css_url:
-preloader:
-  enable: true # true|false
-  load_color: '#000000' # '#37474f'
-  load_style: wizard
-  load_image:  # url
 
+# Loading Animation (加載動畫)
+preloader:
+  enable: false
+  # source
+  # 1. fullpage-loading
+  # 2. pace (progress bar)
+  source: 1
+  # pace theme (see https://codebyzach.github.io/pace/)
+  pace_css_url:
 
 # aside (側邊欄)
 # --------------------------------------
@@ -685,13 +665,13 @@ aside:
     enable: true
     description:
     button:
-      enable: false
+      enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/pan52yu
+      link: https://github.com/xxxxxx
   card_announcement:
     enable: true
-    content: 嘿嘿嘿 ~
+    content: This is my Blog
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -723,15 +703,15 @@ aside:
 # busuanzi count for PV / UV in site
 # 訪問人數
 busuanzi:
-  site_uv: false
-  site_pv: false
+  site_uv: true
+  site_pv: true
   page_pv: true
 
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
-  enable: true
-  publish_date: 6/7/2021 00:00:00
+  enable: false
+  publish_date:
 
 # Aside widget - Newest Comments
 newest_comments:
@@ -758,7 +738,7 @@ translate:
   # The text of the button when the language is Traditional Chinese
   msgToSimplifiedChinese: '簡'
 
-# Read Mode (阅读模式)
+# Read Mode (閲讀模式)
 readmode: true
 
 # dark mode
@@ -771,6 +751,9 @@ darkmode:
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
   autoChangeMode: false
+
+# show scroll percent in scroll-to-top button
+rightside_scroll_percent: false
 
 # Don't modify the following settings unless you know how they work (非必要請不要修改 )
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
@@ -840,7 +823,7 @@ aplayerInject:
 # position 彈窗位置
 # 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: true
+  enable: false
   position: bottom-left
   bg_light: '#49b1f5' # The background color of Toast Notification in light mode
   bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
@@ -896,23 +879,13 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-    # 图流背景与顶部图修改 https://android99.com/2021/08/10/butterfly-top-image-modify/ S
-    - <link rel="stylesheet" href="/css/custom.css">
-    # 图流背景与顶部图修改 E
-    - <link rel="stylesheet" href="/css/modify.css">
-    # 生肖套
-    - <link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'">
   bottom:
     # - <script src="xxxx"></script>
-    - <script src="/js/sun_moon.js" async></script>
-    - <script async src="//at.alicdn.com/t/font_2264842_3izu8i5eoc2.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
 CDN:
-  #平滑滚动
-  smooth_scrolling: https://cdn.nesxc.com/js/smooth-scrolling.js
   # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # Dev version can only choose. ( dev版的主題只能設置為 local )
@@ -982,68 +955,4 @@ CDN:
     # prismjs_autoloader:
     # artalk_js:
     # artalk_css:
-
-smooth_scrolling:
-  enable: true
-
-# hexo-butterfly-swiper
-# see https://akilar.top/posts/8e1264d1/ 首页文章轮播模块
-swiper: # 文章添加 swiper_index 数字越大越靠前
-  enable: false # 开关
-  priority: 5 #过滤器优先权
-  enable_page: all # 应用页面
-  timemode: date #date/updated
-  layout: # 挂载容器类型
-    type: id
-    name: recent-posts
-    index: 0
-  default_descr: 再怎么看我也不知道怎么描述它的啦！
-  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swiper css依赖
-  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
-  custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
-  custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
-excerpt_length: 350
-
-neat_enable: true
-neat_html:
-  enable: true
-  exclude:
-neat_css:
-  enable: true
-  exclude:
-    - '*.min.css'
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - '*.min.js'
-
-# hexo-butterfly-categories-card
-# see https://akilar.top/posts/a9131002/ # 首页文章分类磁铁
-categoryBar:
-  enable: true # 开关
-  priority: 5 #过滤器优先权
-  enable_page: / # 应用页面
-  layout: # 挂载容器类型
-    type: id
-    name: recent-posts
-    index: 0
-  column: odd # odd：3列 | even：4列
-  row: 1 #显示行数，默认两行，超过行数切换为滚动显示
-  message:
-    - descr: 数字孪生
-      cover: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-yxjvw7_1920x1080.png?x-oss-process=style/huyu
-    - descr: 面试
-      cover: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-vqmq75_1920x1080.png?x-oss-process=style/huyu
-    - descr: 提升
-      cover: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-p931d9_1920x1080.png?x-oss-process=style/huyu
-    - descr: 后台系统
-      cover: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/与一月想谁.webp?x-oss-process=style/huyu
-    - descr: 代码优化
-      cover: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/剑姬原计划.webp?x-oss-process=style/huyu
-    - descr: JavaScript
-      cover: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/太空的少女.webp?x-oss-process=style/huyu
-  custom_css: https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css
-
+    # busuanzi:
