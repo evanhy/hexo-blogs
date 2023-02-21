@@ -662,7 +662,7 @@ subtitle:
 #   # pace theme (see https://codebyzach.github.io/pace/)
 #   pace_css_url:
 preloader:
-  enable: true # true|false
+  enable: false # true|false
   load_color: '#000000' # '#37474f'
   load_style: wizard
   load_image:  # url
