@@ -26,24 +26,24 @@ highlight_height_limit: 280 # unit: px
 code_word_wrap: true # 代码换行
 
 # copy settings
-# copyright: Add the copyright information after copied content (複製的內容後面加上版權信息)
+# copyright: Add the copyright information after copied content (复制的内容后面加上版权信息)
 copy:
   enable: false
   copyright:
     enable: true
     limit_count: 50
 
-# social settings (社交圖標設置)
+# social settings (社交图标设置)
 # formal:
 #   icon: link || the description
 social:
   fab fa-github: https://github.com/pan52yu || Github
-  fas fa-envelope: mailto:yhu8836@gmail.com || Email
+#  fas fa-envelope: mailto:yhu8836@gmail.com || Email
 #  fab fa-weixin: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/ba287393c7509c886f8709e34a79232.jpg?x-oss-process=style/huyu || 微信 18762675081
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
-# --------------------------------------
+# -------------------------------------- S
 
 # Algolia search
 algolia_search:
@@ -56,7 +56,7 @@ local_search:
   enable: true
   preload: false
   CDN:
-
+# -------------------------------------- E
 # Math (數學)
 # --------------------------------------
 # About the per_page
@@ -75,29 +75,29 @@ katex:
   per_page: false
   hide_scrollbar: true
 
-# Image (圖片設置)
+# Image (图片设置)
 # --------------------------------------
 
-# Favicon（網站圖標）
+# Favicon（网络图标）
 # favicon: /img/favicon.png
 favicon: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/钢铁侠.png?x-oss-process=style/huyu
 
-# Avatar (頭像)
+# Avatar (头像)
 avatar:
   img: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/20221028215946.png?x-oss-process=style/huyu
   effect: false
 
-# Disable all banner image
+# Disable all banner image 禁用所有横幅图像
 disable_top_img: false
 
 # The banner image of home page 主页banner图
 index_img: transparent
 # index_img: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-6dqjdl_1920x1080.png?x-oss-process=style/huyu
 
-# If the banner of page not setting, it will show the top_img
+# If the banner of page not setting, it will show the top_img 如果页面的横幅没有设置，它将显示 top _ img
 default_top_img: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-p93qd3_1920x1080.png?x-oss-process=style/huyu
 
-# The banner image of archive page
+# The banner image of archive page 存档页面的横幅图像
 archive_img:
 
 # If the banner of tag page not setting, it will show the top_img
@@ -519,7 +519,7 @@ site_verification:
 # The position of site info, eg: 300px/300em/300rem/10% (主頁標題距離頂部距離)
 index_site_info_top:
 # The height of top_img, eg: 300px/300em/300rem (主頁top_img高度)
-index_top_img_height:
+index_top_img_height: 480px
 
 # The user interface setting of category and tag page (category和tag頁的UI設置)
 # index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
@@ -855,7 +855,7 @@ pangu:
   enable: false
   field: site # site/post
 
-# Lazyload (圖片懶加載)
+# Lazyload (图片懒加载)
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
   enable: false
@@ -896,9 +896,9 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-    # 图流背景与顶部图修改 https://android99.com/2021/08/10/butterfly-top-image-modify/ S
+    # 图流背景与顶部图修改 https://android99.com/2021/08/10/butterfly-top-image-modify/
     - <link rel="stylesheet" href="/css/custom.css">
-    # 图流背景与顶部图修改 E
+    # 图流背景与顶部图修改
     - <link rel="stylesheet" href="/css/modify.css">
     # 生肖套
     - <link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'">
