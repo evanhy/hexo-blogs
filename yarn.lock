@@ -1850,6 +1850,13 @@
   dependencies:
     "pug" "^3.0.0"
 
+"hexo-butterfly-clock-anzhiyu@^1.1.8":
+  "integrity" "sha512-fk9b7sv2qwKYc4aoxnQWW1gdpI4gbebNJFhFLfBxMShd+onq9MZw0Dhcn3nDiALbnu2GoHRHPk5PIJlaB2n3Qg=="
+  "resolved" "https://registry.npmmirror.com/hexo-butterfly-clock-anzhiyu/-/hexo-butterfly-clock-anzhiyu-1.1.8.tgz"
+  "version" "1.1.8"
+  dependencies:
+    "pug" "^3.0.0"
+
 "hexo-butterfly-swiper@^1.0.12":
   "integrity" "sha512-2gdp6/rlWIbTQH6/HALodc6QXiO7RV2cNbN6LTJJPj+nFZ9/WQnset9u5KEo8+5G8VR/FAJ4kojvu0+nbvZVxA=="
   "resolved" "https://registry.npmmirror.com/hexo-butterfly-swiper/-/hexo-butterfly-swiper-1.0.12.tgz"
