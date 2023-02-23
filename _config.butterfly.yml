@@ -28,10 +28,10 @@ code_word_wrap: true # 代码换行
 # copy settings
 # copyright: Add the copyright information after copied content (复制的内容后面加上版权信息)
 copy:
-  enable: false
+  enable: true
   copyright:
     enable: true
-    limit_count: 50
+    limit_count: 500
 
 # social settings (社交图标设置)
 # formal:
