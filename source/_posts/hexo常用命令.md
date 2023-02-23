@@ -1,5 +1,6 @@
 ---
 title: hexo常用命令
+hide: true
 banner_img: >-
   https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-weog1q_1920x1080.png?x-oss-process=style/huyu
 index_img: >-

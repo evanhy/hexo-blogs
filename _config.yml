@@ -91,3 +91,7 @@ search:
 lazyload:
   enable: false
   loadingImg: /img/loading.gif
+hide_posts:
+  filter: hide
+  public_generators: []
+  noindex: true

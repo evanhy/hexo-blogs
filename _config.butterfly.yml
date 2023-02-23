@@ -1068,3 +1068,4 @@ electric_clock: # 天气面板
   gaud_map_key: # 高得地图web服务key
   default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
   rectangle: 120.23,30.21 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
+
