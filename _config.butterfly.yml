@@ -84,7 +84,8 @@ favicon: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/钢铁侠.png?x-oss-
 
 # Avatar (头像)
 avatar:
-  img: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/20221028215946.png?x-oss-process=style/huyu
+#  img: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/20221028215946.png?x-oss-process=style/huyu
+  img: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/20230223150133.png?x-oss-process=style/huyu
   effect: false
 
 # Disable all banner image 禁用所有横幅图像

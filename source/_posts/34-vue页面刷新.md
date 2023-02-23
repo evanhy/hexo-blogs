@@ -5,7 +5,7 @@ tags:
   - 小技巧
 abbrlink: 49666
 cover: >-
-    https://raw.githubusercontent.com/pan52yu/blogImg/main/img/20230223141304.png
+  https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-57pqz9_1920x1080.webp?x-oss-process=style/huyu
 description: vue页面刷新的技巧
 date: 2023-02-23 14:08:51
 ---
