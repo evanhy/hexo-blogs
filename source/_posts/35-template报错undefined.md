@@ -1,5 +1,5 @@
 ---
-title: template报错undefine
+title: template报错undefined
 description: 处理模板错误
 cover: >-
   https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-3zj776_1920x1080.webp?x-oss-process=style/huyu
