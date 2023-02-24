@@ -2,6 +2,7 @@
 title: love
 date: 2022-10-29 12:12:11
 password: huyu
+toc: false
 abstract: '有东西被加密了, 请输入密码查看.'
 message: '您好, 这里需要密码.'
 theme: Shrink
