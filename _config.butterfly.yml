@@ -13,6 +13,7 @@ menu:
   工具 || fas fa-solid fa-screwdriver-wrench:
     文档: /tools/Website/ || fas fa-file
     模板: /tools/templates/ || fas fa-code
+    插件: /tools/plugs/ || fas fa-cube
   留言板: /messageboard/ || fas fa-message
   友链: /link/ || fas fa-link
   Love: /love/ || fas fa-heart
