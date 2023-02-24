@@ -1,5 +1,5 @@
 ---
-title: template
+title: 模板
 date: 2023-02-24 13:39:17
 top_img: >-
   https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/2499.webp?x-oss-process=style/huyu
