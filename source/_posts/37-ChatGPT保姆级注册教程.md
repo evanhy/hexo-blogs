@@ -4,6 +4,14 @@ tags:
   - ChatGPT
 abbrlink: 64859
 date: 2023-02-24 10:18:13
+banner_img: >-
+  https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/1292433.webp?x-oss-process=style/huyu
+index_img: >-
+  https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/1292433.webp?x-oss-process=style/huyu
+cover: >-
+  https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/1292433.webp?x-oss-process=style/huyu
+top_img: >-
+  https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/1292433.webp?x-oss-process=style/huyu
 ---
 
 {% tip warning %}
