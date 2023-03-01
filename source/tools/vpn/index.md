@@ -19,11 +19,27 @@ top_img: >-
 
 <!-- endtab -->
 
+<!-- tab Miaona!@fas fa-star -->
+
+{% span center logo large, Miaona! %}
+{% span red center small, 主力机场，很稳定  %}
+{% link Miaona!, https://miaona.org/#/register?code=X3lf3hFy, https://miaona.org/favicon.ico %}
+
+<!-- endtab -->
+
 <!-- tab 飞鸟云 -->
 
 {% span center logo large, 飞鸟云 %}
 {% span center small, 备用机场，速度也是很快的，价格也不贵 %}
 {% link 飞鸟云, https://feiniaoyun.xyz/#/dashboard, https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/20221227155803.png?x-oss-process=style/huyu %}
+
+<!-- endtab -->
+
+<!-- tab EFCloud -->
+
+{% span center logo large, EFCloud %}
+{% span center small, 备用机场，季付3元，新机场速度比较快，不要冲年费，谨防跑路 %}
+{% link EFCloud, https://www.efcloud.cc/#/register?code=4UM961mj, https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/45b4de4485dc839cf2ea974a1991eaf.jpg?x-oss-process=style/huyu %}
 
 <!-- endtab -->
 
