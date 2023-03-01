@@ -19,6 +19,10 @@ top_img: >-
 链接在此：https://www.aliyundrive.com/s/DcsNu5Lz8Lu  >>> 此链接为阿里云盘的链接
 {% endtip %}
 
+{% tip warning %}
+机场推荐： https://www.huyu001.top/tools/vpn/
+{% endtip %}
+
 {% tip %}
 以下操作需要新建一个无痕的浏览器窗口进行操作
 {% image https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/image-20230224094339443.png?x-oss-process=style/huyu %}
