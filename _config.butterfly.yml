@@ -11,6 +11,7 @@ menu:
     标签: /tags/ || fas fa-tags
     分类: /categories/ || fas fa-folder-open
   工具 || fas fa-solid fa-screwdriver-wrench:
+    工具: /tools/learn/ || fas fa-graduation-cap
     文档: /tools/Website/ || fas fa-file
     模板: /tools/templates/ || fas fa-code
     插件: /tools/plugs/ || fas fa-cube
@@ -1075,3 +1076,18 @@ electric_clock: # 天气面板
   default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
   rectangle: 120.23,30.21 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
 
+# tag-plugins-plus
+# see https://akilar.top/posts/615e2dec/
+tag_plugins:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  issues: false #issues标签依赖注入开关
+  link:
+    placeholder: /img/link.png #link_card标签默认的图标图片
+  CDN:
+    anima: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+    jquery: https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js #issues标签依赖
+    issues: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js #issues标签依赖
+    iconfont: //at.alicdn.com/t/font_2032782_8d5kxvn09md.js #参看https://akilar.top/posts/d2ebecef/
+    carousel: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
+    tag_plugins_css: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css

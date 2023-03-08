@@ -29,3 +29,7 @@ top_img: >-
 ## ES6 入门教程
 
 {% iframe 'https://es6.ruanyifeng.com/' 100% 600px %}
+
+## tailwindcss 文档
+
+{% iframe 'https://tailwindcss.com/docs/installation' 100% 600px %}
