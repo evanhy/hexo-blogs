@@ -1,5 +1,6 @@
 ---
 title: ChatGPT保姆级注册教程
+description: 从零到一注册ChatGPT
 tags:
   - ChatGPT
 abbrlink: 64859
