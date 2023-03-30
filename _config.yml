@@ -63,9 +63,9 @@ theme: butterfly
 deploy:
   type: git
   repo: https://github.com/pan52yu/pan52yu.github.io
-  branch: main
-  token: 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
   repository: git@github.com:pan52yu/pan52yu.github.io.git
+  branch: main
+  token: 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
 live2d:
   enable: true
   scriptFrom: local

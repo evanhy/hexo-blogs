@@ -18,7 +18,9 @@ menu:
     VPN: /tools/vpn/ || fas fa-water-ladder
   留言板: /messageboard/ || fas fa-message
   友链: /link/ || fas fa-link
-  Love: /love/ || fas fa-heart
+  Love || fas fa-heart:
+    Love: /love/ || fas fa-heart
+    菜谱: /love/recipes/ || fas fa-utensils
 #  关于: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
