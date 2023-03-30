@@ -97,3 +97,6 @@ hexo config deploy.repository git@github.com:pan52yu/pan52yu.github.io.git
 
 报错443
 https://blog.csdn.net/qq_37555071/article/details/114260533
+
+## 鉴权错误
+> https://blog.csdn.net/weixin_41010198/article/details/119698015
