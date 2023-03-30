@@ -64,7 +64,7 @@ deploy:
   type: git
   repo: https://github.com/pan52yu/pan52yu.github.io
   branch: main
-  token: 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
+  token: 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
   repository: git@github.com:pan52yu/pan52yu.github.io.git
 live2d:
   enable: true
