@@ -8,6 +8,8 @@ message: '您好, 这里需要密码.'
 theme: Shrink
 wrong_pass_message: '抱歉, 这个密码看着不太对, 请再试试.'
 wrong_hash_message: '抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.'
+top_img: >-
+   https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/202303301745692.png
 ---
 
 # 菜谱
