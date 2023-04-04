@@ -67,6 +67,9 @@ fullPath 是：'/music/orderMusic/editMusic?id=xxx'
       setTimeout(() => {
         loading.value = true
       },0)
+        // this.$nextTick(() => {
+        //     this.isRouterAlive = true
+        // })
       // 这样table就会进行一个强制刷新
     }
   }
