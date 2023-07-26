@@ -10,174 +10,321 @@ tags:
   - js
 ---
 
-# for...in 和 for...of有什么区别
 
-## 最明显的区别：
 
-- for...in 遍历得到 key
-- for...of 遍历得到 value
+# `for…in` 和 `for…of`有什么区别
 
-> 代码演示：
+## for…in
 
-```javascript
-const arr = [10, 20, 30]
-for (let val in arr) {
-		console.log('for...in', val)
+
+
+### 1.遍历数组
+
+```js
+const arr = ["element1", "element2", "element3"]
+
+for (const item in arr) {
+  console.log("🚀 ~ for in", arr[item])
 }
-console.log('====我是分隔符====')
-for (let val of arr) {
-		console.log('for...of', val)
-}
-
+// 输出 element1 element2 element3
 ```
 
-> 演示结果：
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4e9eb288960643709a740f331d543cc0~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
 
-## 二者适用于不同的数据类型
+### 2.遍历对象
 
-- 遍历对象：for...in可以，for...of 不可以
-- 遍历Map Set: for..of 可以，for..in 不可以
-- 遍历 generator：for...of 可以，for...in 不可以
-
-真的是这样吗？我们就来亲身测试一下！
-
-顺便带着思考一下这个问题：什么时候用 for...of 什么时候用 for...in呢？
-
-### 遍历对象时：
-
-> 演示：
-
-```javascript
-// 遍历对象
+```js
 const obj = {
-		name: '张三',
-		city: 'beijing'
+  name: "obj",
+  age: 18,
 }
-for (let val in obj) {
-		console.log('for...in', val)
+for (const item in obj) {
+  console.log("🚀 ~ for in", item, obj[item])
 }
-for (let val of obj) {
-		console.log('for...of', val)
-}
-
+// 输出：
+//  name obj
+//  age 18
 ```
 
-> 演示结果：
+> 检测是否可枚举
+>
+> ```js
+> console.log("🚀 ~ ", Object.getOwnPropertyDescriptor(obj, "name"))
+> // 输出：
+> //  { value: 'obj', writable: true, enumerable: true, configurable: true }
+> //  enumerable: true 可枚举
+> ```
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3b99a3b79bbd4186b5e66077f707014d~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
 
-我们可以看见for..in 正常进行了遍历。
 
-但是 for...of 出现了报错，提示我们 obj 不是一个可以遍历的数据
+### 3.遍历字符串
 
-### 遍历 set 时
-
-> 演示：
-
-```vbnet
-// 遍历 Set 
-const set = new Set([10, 20, 30])
-for(let n in set) {
-  console.log('for...in', n)
+```js
+const str = "hello!world"
+for (const item in str) {
+  console.log("🚀 ~ for in", str[item])
 }
-for(let n of set) {
-  console.log('for...of', n)
-}
- 
+// 输出：
+//  h e l l o ! w o r l d
 ```
 
-> 演示结果：
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b4a0764752db416c89fc998fcb26b012~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
 
-我们可以看见for..in 值是 undefined。
+### 4.遍历字符串，包含unicode字符
 
-但是 for...of 正常进行了遍历。
+```js
+const str2 = "a𠮷c"
 
-### 遍历 map 时
-
-> 演示：
-
-```arduino
-// 遍历 Map 
-const map = new Map([
-  ['x', 10],
-  ['x1', 110],
-  ['x2', 210],
-])
-for(let m in map) {
-  console.log('for...in', m)
+for (const item in str2) {
+  console.log("🚀 ~ for in", str2[item])
 }
-for(let m of map) {
-  console.log('for...of', m)
+// 输出：
+//  a � � c
+```
+
+
+
+### 5.遍历对象，父类属性也会遍历出来
+
+```js
+const fatter = {
+  fatherAttr: 1
+}
+
+const instance = Object.create(fatter)
+
+instance.a = 1;
+instance.b = 2;
+instance.c = 3;
+
+for (const attr in instance) {
+  console.log(attr, instance[attr])
+}
+
+// 输出：
+//  a 1
+//  b 2
+//  c 3
+//  fatherAttr 1
+// 将原型链上的属性也遍历出来了
+
+// 通过 hasOwnProperty 判断是否是自身属性
+for (const attr in instance) {
+  if (instance.hasOwnProperty(attr)) {
+   console.log(attr, instance[attr])
+  }
 }
 ```
 
-> 演示结果：
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/727e0bcf548c4576bfc113d59dc99cdd~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
 
-我们可以看见for..in 值是 undefined。
+## for…of
 
-但是 for...of 正常进行了遍历。
+**示例：**
 
-### 遍历 generator
-
-#> 代码演示：
-
-```javascript
-// 遍历 generator
-function* foo() {
-		yield 10
-		yield 20
-		yield 30
+```js
+let str = 'a𠮷c';
+for (const item of str) {
+  console.log(item)
 }
-
-for (let g in foo) {
-		console.log('for...in', g)
-}
-for (let g of foo) {
-		console.log('for...of', g)
-}
-
+// 输出：
+//  a 𠮷 c
 ```
 
-> 演示结果：
+**遍历Map**
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aa203c1577c94e2085ab73631ea7bc84~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+```js
+const map = new Map([["a", 1], ["b", 2], ["c", 3]]);
+for (const mapElement of map) {
+  console.log(mapElement)
+}
+// 输出：
+//  [ 'a', 1 ] [ 'b', 2 ] [ 'c', 3 ]
 
-我们可以看见for..in 值是 undefined。
+// 可解构
+for (const [key, value] of map) {
+  console.log(key, value)
+}
+// 输出：
+//  a 1  b 2  c 3
+```
 
-但是 for...of 正常进行了遍历。
 
-### 二者在什么情况下可以使用呢？
 
-到底那些数据可以用 for...in 那些可以用 for...of ?
+**`Set`和`Array`**
 
-在提出这个问题的时候，我们需要先知道：**for...in** 和 **for...of** 可以用在哪？
++ `entries()、keys()、values()` 都返回一个迭代器对象
++ `entries()` 返回值为集合的键值对 `[[key, value], [key, value], [key, value]]`（对于数组，key 就是索引值；对于 Set，key 就是 value）
++ `keys()` 返回值为集合的键名 `[key, key, key]`（对于数组，key 就是索引值；对于 Set，key 就是 value）
++ `values()` 返回值为集合的值 `[value, value, value]`
 
-#### **for...in**
+```js
+const arr2 = ["a", "b", "c"];
+let set = new Set(arr2);
 
-可以用在**可枚举**的数据，如：
+// 1.entries
+for (const entry of set.entries()) {
+  console.log(entry, "entries")
+}
+// 输出：
+//  [ 'a', 'a' ] [ 'b', 'b' ] [ 'c', 'c' ]
 
-- 对象
-- 数组
-- 字符串
+for (const arElement of arr2.entries()) {
+  console.log(arElement, "arElement")
+}
+// 输出：
+//  [ 0, 'a' ] [ 1, 'b' ] [ 2, 'c' ]
 
-##### 什么是可枚举数据呢？
+// 2.keys
+for (const key of set.keys()) {
+  console.log(key, "keys")
+}
+// 输出：
+//  a b c
+for (const key of arr2.keys()) {
+  console.log(key, "keys")
+}
+// 输出：
+//  0 1 2
+
+// 3.values
+for (const value of set.values()) {
+  console.log(value, "values")
+}
+// 输出：
+//  a b c
+for (const value of arr2.values()) {
+  console.log(value, "values")
+}
+// 输出：
+//  a b c
+```
+
+## for...in 和 for...of 的区别
+
+|   for…in   |   for…of   |      |
+| :--------: | :--------: | :--: |
+|    key     |   value    | 结果 |
+| 可枚举属性 | 可迭代对象 | 遍历 |
+|  遍历对象  |  遍历数组  | 常用 |
+
+## 拓展操作
+
+```js
+const father = {
+  fatherAttr: 1
+}
+
+const instance = Object.create(father)
+
+instance.a = 1;
+instance.b = 2;
+instance.c = 3;
+
+Object.defineProperty(instance, "d", {
+  value: 4,
+  enumerable: false,  // 不可枚举
+})
+```
+
+###  1.Object.Keys 获取键名数组
+
+```js
+for (const key of Object.keys(instance)) {
+  console.log(key, "Object.keys")
+}
+// 输出：
+//  a b c
+```
+
+> `Object.keys` 不会遍历原型链上的属性、以及自身不可枚举的属性
+>
+> `Object.keys` 返回的是一个数组，所以可以使用数组的方法
+
++ ps: `Object.keys` 与 `for in` 的区别
+
+  ```js
+  for (const instanceKey in instance) {
+    console.log(instanceKey, "for in")
+  }
+  // 输出：
+  //  a b c fatherAttr
+  ```
+
+  > `for in` 会遍历原型链上的属性，但是同样不会遍历自身不可枚举的属性
+
+### 2.Object.getOwnPropertyNames() 获取键名数组
+
+> Object.getOwnPropertyNames() 与 Object.keys() 的区别在于，Object.getOwnPropertyNames() 会遍历自身不可枚举的属性
+
+```js
+for (const instanceKey of Object.getOwnPropertyNames(instance)) {
+  console.log(instanceKey, "Object.getOwnPropertyNames")
+}
+// 输出：
+//  a b c d
+```
+
+###  3.Object.entries() 获取键值对数组
+
+> `Object.entries()` 不会遍历原型链上的属性和自身不可枚举的属性
+
+```js
+for (const instanceKey of Object.entries(instance)) {
+  console.log(instanceKey, "Object.entries")
+}
+// 输出：
+//  [ 'a', 1 ] [ 'b', 2 ] [ 'c', 3 ]
+```
+
++  ps: 当使用对象初始化一个Map实例，可以使用`Object.entries()`来初始化
+
+   ```js
+   const obj = {a: 1, b: 2, c: 3};
+   const map = new Map(Object.entries(obj));
+   console.log(map.get("a")) // 1
+   ```
+
+### 4.Object.values() 获取对象的属性值数组
+
+> `Object.values()` 不会遍历原型链上的属性和自身不可枚举的属性
+
+```js
+for (const instanceKey of Object.values(instance)) {
+  console.log(instanceKey, "Object.values")
+}
+// 输出：
+//  1 2 3
+```
+
+### 5.Object.getOwnPropertySymbols()获取Symbol属性名
+
+> 上面的方法都无法获取Symbol属性名，只能通过`Object.getOwnPropertySymbols()`来获取
+
+```js
+instance[Symbol("e")] = 5;
+for (const instanceKey of Object.getOwnPropertySymbols(instance)) {
+  console.log(instanceKey, "Object.getOwnPropertySymbols")
+}
+// 输出：
+//  Symbol(e)
+```
+
+{% referfrom [1],'JavaScript骚操作之遍历、枚举与迭代（上篇）','https://juejin.cn/post/6844903724897271816' %}
+
+
+
+## 什么是可枚举数据呢？
 
 举个例子来说
 
-```ini
+```js
 const obj = { x: 100 }
- 
 ```
 
 我们使用 `Object.getOwnPropertyDescriptors` 方法获取指定对象所有的自有属性的属性描述符。
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bab94bd2e4484f90b4eddc1047ab8aa5~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+<img src="https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/image-20230726133156693.png" alt="枚举" style="zoom:50%;" />
 
 这时候发现他的每一个属性中 enumerable 都是 true，这时候他就是可枚举的。
 
@@ -191,7 +338,7 @@ const obj = { x: 100 }
 
 所以一般情况下 对象、数组、字符串都是可枚举的
 
-#### **for...of**
+## 什么是**可迭代**数据呢？
 
 **for...of**用于**可迭代**的数据，如：
 
@@ -200,13 +347,8 @@ const obj = { x: 100 }
 - Map
 - Set
 
-##### 什么是**可迭代**数据呢？
-
-举个例子来说
-
-```ini
-const arr = [10, 20, 30]
- 
+```js
+const arr = [1, 2, 3]
 ```
 
 数组中有个 `Symbol.iterator`的属性：
@@ -215,10 +357,10 @@ const arr = [10, 20, 30]
 - 2.`[Symbol.iterator]`的属性会返回一个函数
 - 3.`[Symbol.iterator]`返回的函数执行之后会返回一个对象
 - 4.`[Symbol.iterator]`函数返回的对象中又一个名称叫做next的方法
-- 5.next方法每次执行都会返回一个对象`{value: 10, done: false}`
+- 5.next方法每次执行都会返回一个对象`{value: 1, done: false}`
 - 6.这个对象中存储了当前取出的数据和是否取完了的标记
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/68120cc13a194f3bb18219322e56d7bb~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+<img src="https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/image-20230726133554323.png" alt="迭代" style="zoom:50%;" />
 
 就类似设计模式中的迭代器模式：
 
@@ -233,4 +375,6 @@ const arr = [10, 20, 30]
 - **for...in**可以用在**可枚举**的数据
 - **for...of**用于**可迭代**的数据
 
-{% referfrom [1],'for...in 和 for...of有什么区别','https://juejin.cn/post/7104444342684614664' %}
+
+
+{% referfrom [2],'for...in 和 for...of有什么区别','https://juejin.cn/post/7104444342684614664' %}
