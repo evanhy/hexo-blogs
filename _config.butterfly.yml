@@ -690,7 +690,7 @@ aside:
     archive: true
     tag: true
     category: true
-  card_author:
+  card_author: # 作者
     enable: true
     description:
     button:
@@ -698,33 +698,33 @@ aside:
       icon: fab fa-github
       text: Follow Me
       link: https://github.com/pan52yu
-  card_announcement:
-    enable: true
+  card_announcement: # 公告
+    enable: false
     content: 嘿嘿嘿 ~
-  card_recent_post:
-    enable: true
+  card_recent_post: # 最近文章
+    enable: false
     limit: 5 # if set 0 will show all
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
-  card_categories:
+  card_categories: # 分類
     enable: true
     limit: 8 # if set 0 will show all
     expand: none # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
-  card_tags:
-    enable: true
+  card_tags: # 標籤
+    enable: false
     limit: 40 # if set 0 will show all
     color: false
     sort_order: # Don't modify the setting unless you know how it works
-  card_archives:
-    enable: true
+  card_archives: # 文章歸檔
+    enable: false
     type: monthly # yearly or monthly
     format: MMMM YYYY # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
     limit: 8 # if set 0 will show all
     sort_order: # Don't modify the setting unless you know how it works
-  card_webinfo:
-    enable: true
+  card_webinfo: # 網站信息
+    enable: false
     post_count: true
     last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
