@@ -1,5 +1,5 @@
 ---
-title: VPN 推荐
+title: VPN推荐
 date: 2023-02-24 22:53:17
 toc:
 
@@ -24,8 +24,16 @@ top_img: >-
 <!-- tab GSOU CLOUD@fas fa-star -->
 
 {% span center logo large, GSOU CLOUD %}
-{% span red center small, 主力机场 %}
+{% span red center small, 👍🏻主力机场 BGP 隧道中转、IPLC 专线成本非常高，稳定性远比普通线路高很多，延迟低，线路质量也非常好，用户体验非常好。在特殊时期，IPLC 专线服务也几乎不受任何影响 %}
 {% link 最萌の云, https://gsoust.xyz/auth/register?code=8R6N, https://gsoust.xyz/favicon.ico %}
+
+<!-- endtab -->
+
+<!-- tab FlyingBird@fas fa-star -->
+
+{% span center logo large, FlyingBird %}
+{% span red center small, 超强的技术团队 高峰期稳定快速不掉线 可免费体验顶级服务 超快速度 4K秒开 体验宛如身在海外 %}
+{% link 最萌の云, https://fbaff01.flyb-aff01.com/auth/register?code=Rmxb, https://aff01.fyb-aff01.com/favicon.ico %}
 
 <!-- endtab -->
 
@@ -37,18 +45,26 @@ top_img: >-
 
 <!-- endtab -->
 
-<!-- tab 飞鸟云 -->
+<!-- tab WindyCloud -->
 
-{% span center logo large, 飞鸟云 %}
-{% span center small, 备用机场，速度也是很快的，价格也不贵 %}
-{% link 飞鸟云, https://feiniaoyun.xyz/#/register?code=XYRZjGTW, https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/20221227155803.png?x-oss-process=style/huyu %}
+{% span center logo large, WindyCloud %}
+{% span center small, 备用机场，超低价流媒体解锁/隧道转发 %}
+{% link EFCloud, https://portal.passgfw.top/#/register?code=KyKJoWCL, https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/202302242308038.png?x-oss-process=style/huyu %}
+
+<!-- endtab -->
+
+<!-- tab 极速云 -->
+
+{% span center logo large, 极速云 %}
+{% span center small, 备用机场，便宜机场，超低价，稳定，解锁流媒体+GPT+全球节点 %}
+{% link EFCloud, https://www.xn--9kqy4sc0nciaw60p.me/#/register?code=PHDNsOpT, https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/202302242308038.png?x-oss-process=style/huyu %}
 
 <!-- endtab -->
 
 <!-- tab 两元机场 -->
 
 {% span center logo large, 两元机场 %}
-{% span center small, 备用机场，一年十几块，买不了吃亏，买不了上当，节点有很多，支持流媒体 %}
+{% span center small, 备用机场，便宜机场，一年十几块，买不了吃亏，买不了上当，节点有很多，支持流媒体 %}
 {% link 两元机场, https://xn--5hqx9equq.com/#/register?code=JP529hd7, https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/202302242308038.png?x-oss-process=style/huyu %}
 
 <!-- endtab -->
@@ -56,7 +72,7 @@ top_img: >-
 <!-- tab 三分机场 -->
 
 {% span center logo large, 三分机场 %}
-{% span center small, 备用机场，一天三分钱，很便宜但是节点质量不高 %}
+{% span center small, 备用机场，便宜机场，一天三分钱，很便宜但是节点质量不高 %}
 {% link 三分机场, https://xn--ehq00hgtfdmt.xyz/#/register?code=P5BGSDhi, https://xn--ehq00hgtfdmt.xyz/theme/Bob-Theme-Argon/favicon.ico %}
 
 <!-- endtab -->
