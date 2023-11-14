@@ -25,15 +25,15 @@ top_img: >-
 
 {% span center logo large, GSOU CLOUD %}
 {% span red center small, 👍🏻主力机场 BGP 隧道中转、IPLC 专线成本非常高，稳定性远比普通线路高很多，延迟低，线路质量也非常好，用户体验非常好。在特殊时期，IPLC 专线服务也几乎不受任何影响 %}
-{% link 最萌の云, https://gsoust.xyz/auth/register?code=8R6N, https://gsoust.xyz/favicon.ico %}
+{% link GSOU CLOUD, https://gsoust.xyz/auth/register?code=8R6N, https://gsoust.xyz/favicon.ico %}
 
 <!-- endtab -->
 
-<!-- tab FlyingBird@fas fa-star -->
+<!-- tab 最萌の云@fas fa-star -->
 
-{% span center logo large, FlyingBird %}
-{% span red center small, 超强的技术团队 高峰期稳定快速不掉线 可免费体验顶级服务 超快速度 4K秒开 体验宛如身在海外 %}
-{% link 最萌の云, https://fbaff01.flyb-aff01.com/auth/register?code=Rmxb, https://aff01.fyb-aff01.com/favicon.ico %}
+{% span center logo large, 最萌の云 %}
+{% span red center small, 主力机场 最萌の云最新导航站: https://new.cutecloud.link/link %}
+{% link 最萌の云, https://www.cutecloud.net/user, https://www.cutecloud.net/favicon.ico %}
 
 <!-- endtab -->
 
@@ -49,7 +49,7 @@ top_img: >-
 
 {% span center logo large, WindyCloud %}
 {% span center small, 备用机场，超低价流媒体解锁/隧道转发 %}
-{% link EFCloud, https://portal.passgfw.top/#/register?code=KyKJoWCL, https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/202302242308038.png?x-oss-process=style/huyu %}
+{% link WindyCloud, https://portal.passgfw.top/#/register?code=KyKJoWCL, https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/202302242308038.png?x-oss-process=style/huyu %}
 
 <!-- endtab -->
 
@@ -57,7 +57,7 @@ top_img: >-
 
 {% span center logo large, 极速云 %}
 {% span center small, 备用机场，便宜机场，超低价，稳定，解锁流媒体+GPT+全球节点 %}
-{% link EFCloud, https://www.xn--9kqy4sc0nciaw60p.me/#/register?code=PHDNsOpT, https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/202302242308038.png?x-oss-process=style/huyu %}
+{% link 极速云, https://www.xn--9kqy4sc0nciaw60p.me/#/register?code=PHDNsOpT, https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/202302242308038.png?x-oss-process=style/huyu %}
 
 <!-- endtab -->
 
