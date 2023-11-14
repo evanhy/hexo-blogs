@@ -41,7 +41,7 @@ top_img: >-
 
 {% span center logo large, EFCloud %}
 {% span center small, 备用机场，季付3元，新机场速度比较快，不要冲年费，谨防跑路 %}
-{% link EFCloud, https://www.efcloud.cc/#/register?code=4UM961mj, https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/45b4de4485dc839cf2ea974a1991eaf.jpg?x-oss-process=style/huyu %}
+{% link EFCloud, https://www.easyfastcloud.com/#/register?code=4UM961mj, https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/45b4de4485dc839cf2ea974a1991eaf.jpg?x-oss-process=style/huyu %}
 
 <!-- endtab -->
 
