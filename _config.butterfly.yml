@@ -92,7 +92,6 @@ favicon: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/钢铁侠.png?x-oss-
 
 # Avatar (头像)
 avatar:
-  #  img: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/20221028215946.png?x-oss-process=style/huyu
   img: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/20230223150133.png?x-oss-process=style/huyu
   effect: false
 
@@ -995,24 +994,6 @@ CDN:
 smooth_scrolling:
   enable: true
 
-# hexo-butterfly-swiper
-# see https://akilar.top/posts/8e1264d1/ 首页文章轮播模块
-swiper: # 文章添加 swiper_index 数字越大越靠前
-  enable: false # 开关
-  priority: 5 #过滤器优先权
-  enable_page: all # 应用页面
-  timemode: date #date/updated
-  layout: # 挂载容器类型
-    type: id
-    name: recent-posts
-    index: 0
-  default_descr: 再怎么看我也不知道怎么描述它的啦！
-  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swiper css依赖
-  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
-  custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
-  custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
-excerpt_length: 350
-
 neat_enable: true
 neat_html:
   enable: true
@@ -1028,55 +1009,6 @@ neat_js:
   compress:
   exclude:
     - '*.min.js'
-
-# hexo-butterfly-categories-card
-# see https://akilar.top/posts/a9131002/ # 首页文章分类磁铁
-categoryBar:
-  enable: false # 开关
-  priority: 5 #过滤器优先权
-  enable_page: / # 应用页面
-  layout: # 挂载容器类型
-    type: id
-    name: recent-posts
-    index: 0
-  column: odd # odd：3列 | even：4列
-  row: 1 #显示行数，默认两行，超过行数切换为滚动显示
-  message:
-    - descr: 数字孪生
-      cover: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-yxjvw7_1920x1080.png?x-oss-process=style/huyu
-    - descr: 面试
-      cover: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-vqmq75_1920x1080.png?x-oss-process=style/huyu
-    - descr: 提升
-      cover: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-p931d9_1920x1080.png?x-oss-process=style/huyu
-    - descr: 后台系统
-      cover: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/与一月想谁.webp?x-oss-process=style/huyu
-    - descr: 代码优化
-      cover: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/剑姬原计划.webp?x-oss-process=style/huyu
-    - descr: JavaScript
-      cover: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/太空的少女.webp?x-oss-process=style/huyu
-  custom_css: https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css
-
-# electric_clock
-# see https://anzhiy.cn/posts/fc18.html
-electric_clock: # 天气面板
-  enable: true # 开关
-  priority: 5 #过滤器优先权
-  enable_page: all # 应用页面
-  exclude:
-  # - /posts/
-  # - /about/
-  layout: # 挂载容器类型
-    type: class
-    name: sticky_layout
-    index: 0
-  loading: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif #加载动画自定义
-  clock_css: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css
-  clock_js: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js
-  ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0
-  qweather_key: # 和风天气key
-  gaud_map_key: # 高得地图web服务key
-  default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
-  rectangle: 120.23,30.21 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
 
 # tag-plugins-plus
 # see https://akilar.top/posts/615e2dec/
