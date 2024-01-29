@@ -1,10 +1,3 @@
-/**
- * Butterfly
- * @example
- *  page_description()
- *  cloudTags(source, minfontsize, maxfontsize, limit)
- */
-
 'use strict'
 
 const { stripHTML, escapeHTML, prettyUrls } = require('hexo-util')
@@ -24,11 +17,8 @@ hexo.extend.helper.register('page_description', function () {
 
 hexo.extend.helper.register('cloudTags', function (options = {}) {
   const env = this
-  let source = options.source
-  const minfontsize = options.minfontsize
-  const maxfontsize = options.maxfontsize
-  const limit = options.limit
-  const unit = options.unit || 'px'
+  let { source, minfontsize, maxfontsize, limit, unit, orderby, order } = options
+  unit = unit || 'px'
 
   let result = ''
   if (limit > 0) {
@@ -43,7 +33,7 @@ hexo.extend.helper.register('cloudTags', function (options = {}) {
   })
 
   const length = sizes.length - 1
-  source.forEach(tag => {
+  source.sort(orderby, order).forEach(tag => {
     const ratio = length ? sizes.indexOf(tag.length) / length : 0
     const size = minfontsize + ((maxfontsize - minfontsize) * ratio)
     let style = `font-size: ${parseFloat(size.toFixed(2))}${unit};`
@@ -63,12 +53,8 @@ hexo.extend.helper.register('md5', function (path) {
 })
 
 hexo.extend.helper.register('injectHtml', function (data) {
-  let result = ''
   if (!data) return ''
-  for (let i = 0; i < data.length; i++) {
-    result += data[i]
-  }
-  return result
+  return data.join('')
 })
 
 hexo.extend.helper.register('findArchivesTitle', function (page, menu, date) {
@@ -97,9 +83,6 @@ hexo.extend.helper.register('findArchivesTitle', function (page, menu, date) {
 })
 
 hexo.extend.helper.register('isImgOrUrl', function (path) {
-  const imgTestReg = /\.(png|jpe?g|gif|svg|webp)(\?.*)?$/
-  if (path.indexOf('//') !== -1 || imgTestReg.test(path)) {
-    return true
-  }
-  return false
+  const imgTestReg = /\.(png|jpe?g|gif|svg|webp)(\?.*)?$/i
+  return path.indexOf('//') !== -1 || imgTestReg.test(path)
 })
