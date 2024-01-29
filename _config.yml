@@ -31,8 +31,8 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-highlight:
-  enable: true
+highlight:  # 代码高亮
+  enable: true # 是否开启
   line_number: false
   auto_detect: false
   tab_replace: ''

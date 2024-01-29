@@ -31,14 +31,14 @@ highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
 highlight_height_limit: 280 # unit: px
-code_word_wrap: true # 代码换行
+code_word_wrap: false # 代码换行
 
 # copy settings
 # copyright: Add the copyright information after copied content (复制的内容后面加上版权信息)
 copy:
   enable: true
   copyright:
-    enable: true
+    enable: false
     limit_count: 500
 
 # social settings (社交图标设置)
@@ -99,7 +99,8 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page 主页banner图
-index_img: transparent
+index_img: false
+# index_img: transparent
 # index_img: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/wallhaven-6dqjdl_1920x1080.png?x-oss-process=style/huyu
 
 # If the banner of page not setting, it will show the top_img 如果页面的横幅没有设置，它将显示 top _ img
@@ -249,10 +250,10 @@ post_pagination: 1
 noticeOutdate:
   enable: true
   style: flat # style: simple/flat
-  limit_day: 365 # When will it be shown
+  limit_day: 100 # When will it be shown
   position: top # position: top/bottom
-  message_prev: It has been
-  message_next: days since the last update, the content of the article may be outdated.
+  message_prev: 距离上次更新已经过去了
+  message_next: 天，信息可能已经有所变动，请注意甄别!!!
 
 # Share System (分享功能)
 # --------------------------------------
