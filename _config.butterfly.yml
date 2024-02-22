@@ -905,15 +905,7 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-    # 图流背景与顶部图修改 https://android99.com/2021/08/10/butterfly-top-image-modify/
-    - <link rel="stylesheet" href="/css/custom.css">
-    # 图流背景与顶部图修改
-    - <link rel="stylesheet" href="/css/modify.css">
-    # 生肖套
-    - <link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'">
   bottom:
-    # - <script src="xxxx"></script>
-    - <script src="/js/sun_moon.js" async></script>
     - <script async src="//at.alicdn.com/t/font_2264842_3izu8i5eoc2.js"></script>
 
 # CDN
