@@ -95,20 +95,3 @@ hide_posts:
   filter: hide
   public_generators: []
   noindex: true
-tag_plugins:
-  enable: true
-  priority: 5
-  issues: false
-  link:
-    placeholder: /img/link.png
-  CDN:
-    anima: >-
-      https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css
-    jquery: https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js
-    issues: >-
-      https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js
-    iconfont: //at.alicdn.com/t/font_2032782_8d5kxvn09md.js
-    carousel: >-
-      https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
-    tag_plugins_css: >-
-      https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
