@@ -45,7 +45,7 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  fab fa-github: https://github.com/pan52yu || Github
+  fab fa-github: https://github.com/evanhy || Github
 #  fas fa-envelope: mailto:yhu8836@gmail.com || Email
 #  fab fa-weixin: https://huyu-blog.oss-cn-hangzhou.aliyuncs.com/img/ba287393c7509c886f8709e34a79232.jpg?x-oss-process=style/huyu || 微信 18762675081
 
@@ -343,7 +343,7 @@ waline:
 # utterances
 # https://utteranc.es/
 utterances:
-  repo: pan52yu/hugoblogtalks
+  repo: evanhy/hugoblogtalks
   # Issue Mapping: pathname/url/title/og:title
   issue_term: pathname
   # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
@@ -697,7 +697,7 @@ aside:
       enable: false
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/pan52yu
+      link: https://github.com/evanhy
   card_announcement: # 公告
     enable: false
     content: 嘿嘿嘿 ~

@@ -8,7 +8,7 @@
     "deploy": "hexo deploy",
     "server": "hexo server",
     "dev": "hexo g -d",
-    "bugdev": "hexo config deploy.repository git@github.com:pan52yu/pan52yu.github.io.git"
+    "bugdev": "hexo config deploy.repository git@github.com:evanhy/evanhy.github.io.git"
   },
   "hexo": {
     "version": "7.1.1"
