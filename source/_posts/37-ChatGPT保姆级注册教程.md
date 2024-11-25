@@ -21,7 +21,7 @@ top_img: >-
 {% endtip %}
 
 {% tip warning %}
-机场推荐： https://www.huyu001.top/tools/vpn/
+机场推荐： https://note.webhy.cn/tools/vpn/
 {% endtip %}
 
 {% tip %}

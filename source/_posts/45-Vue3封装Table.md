@@ -10,8 +10,8 @@ abbrlink: 37031
 date: 2023-03-30 14:08:43
 ---
 
-{% referfrom '[1]','单独封装Table','https://www.huyu001.top/posts/43495.html' %}
-{% referfrom '[2]','单独封装分页','https://www.huyu001.top/posts/42451.html' %}
+{% referfrom '[1]','单独封装Table','https://note.webhy.cn/posts/43495.html' %}
+{% referfrom '[2]','单独封装分页','https://note.webhy.cn/posts/42451.html' %}
 
 
 # Vue3封装Table

@@ -6,4 +6,4 @@ top_img: >-
 ---
 # vscode插件推荐
 
-> [点我跳转](https://www.huyu001.top/posts/12458.html)
+> [点我跳转](https://note.webhy.cn/posts/12458.html)
