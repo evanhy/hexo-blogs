@@ -4,7 +4,7 @@ description: 今天你学习了吗
 keywords: null
 author: EvanSky
 language: zh-CN
-timezone: ''
+timezone: 'Asia/Shanghai'
 url: https://note.webhy.cn/
 permalink: posts/:abbrlink.html
 permalink_defaults: null
